@@ -16,8 +16,8 @@
 #
 
 FROM openjdk:8-jre-alpine
-VOLUME /tmp
-ADD /home/bharath/.jenkins/workspace/dev/target/cubegenerator-1.0-SNAPSHOT.jar dev.jar
+ADD target/cubegenerator-1.0-SNAPSHOT.jar cubegenerator-1.0-SNAPSHOT.jar
+EXPOSE 8080
 ENV JAVA_OPTS=""
 
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -jar /dev.jar" ]
+ENTRYPOINT [ "java", "-jar", "cubegenerator-1.0-SNAPSHOT.jar"]
