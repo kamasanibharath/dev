@@ -17,7 +17,7 @@
 
 FROM openjdk:8-jre-alpine
 VOLUME /tmp
-ADD target/'name of your app'.jar app.jar
+ADD target/'dev'.jar app.jar
 ENV JAVA_OPTS=""
 
 ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -jar /app.jar" ]
